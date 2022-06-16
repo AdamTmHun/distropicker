@@ -22,7 +22,7 @@
 						</label>
 					</div>
 					{#if answer.tooltip}
-						<div class="tooltip" data-tip={answer.tooltip}>
+						<div class="tooltip tooltip-left lg:!tooltip" data-tip={answer.tooltip}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
@@ -52,7 +52,7 @@
 						</label>
 					</div>
 					{#if answer.tooltip}
-						<div class="tooltip" data-tip={answer.tooltip}>
+						<div class="tooltip tooltip-left lg:tooltip" data-tip={answer.tooltip}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
@@ -78,8 +78,13 @@
 				<input type="range" min="0" max="75" value="25" class="range" step="25" />
 				<div class="w-full flex justify-between text-xs px-2 ">
 					{#each quiz.main[id - 1].answers as answer}
-						<span>|</span>
-						
+						<span>{answer.answer}</span>
+					{/each}
+					
+				</div>
+				<div class="w-full flex justify-between text-xs px-2 ">
+					{#each quiz.main[id - 1].answers as answer}
+						<span></span>
 					{/each}
 					
 				</div>
