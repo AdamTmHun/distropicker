@@ -1,0 +1,166 @@
+{
+	"main": [
+		{
+			"question": "There are distros for special usecases. Please select what you are going to use your system for.",
+			"type": "multiple",
+			"answers": [
+				{
+					"answer": "I want a distro for daily usage"
+				},
+				{
+					"answer": "I want a distro for gaming",
+					"tooltip": "If a distro wasn't made for gaming or it is not supported by game publishers, that doesn't mean that it won't run games."
+				},
+				{
+					"answer": "I want a distro for anonimity"
+				},
+				{
+					"answer": "I want a distro for a server"
+				},
+				{
+					"answer": "I want a distro for isolating my programs",
+					"tooltip": "Only tick this if you exclusively want this. There are not a lot of distros with this feature, so it might be harder to find one with your preferences."
+				},
+				{
+					"answer": "I want a distro that has Live Mode",
+					"tooltip": "Live Mode is a feature that will let your try your distro first before installing from your installation media, without changing anything on your hard drive"
+				}
+			]
+		},
+		{
+			"question": "Some distros might require you to be familiar with the terminal and with certain commands and tools. Please select your tier of knowledge.",
+			"type": "single",
+			"answers": [
+				{
+					"answer": "I have little to no knowledge of Linux and/or the terminal"
+				},
+				{
+					"answer": "I don't know much about Linux and/or the terminal, but I am not afraid to get to know it",
+					"tooltip": "We suggest choosing this option if you have time and effort to get familiar with it."
+				},
+				{
+					"answer": "I am familiar with the terminal of other OSes, but not with Linux"
+				},
+				{
+					"answer": "I am familiar with Linux and it's terminal and shell, and using tools should not be a problem"
+				}
+			]
+		},
+		{
+			"question": "Some distros allow you to customize more settings during installation. How many settings would you like to edit?",
+			"type": "single",
+			"answers": [
+				{
+					"answer": "I want to customize little to no settings, I would like my OS as is."
+				},
+				{
+					"answer": "I want to customize every inch of my system, even if this means that I have to use the terminal, not a GUI for installing"
+				}
+			]
+		},
+		{
+			"question": "Your system might have a 32-bit architecture. If your system has over 4 GB of ram, it has 64-bit architecture. Please select the one you are looking for.",
+			"type": "single",
+			"answers": [
+				{
+					"answer": "I have 32-bit hardware"
+				},
+				{
+					"answer": "I have 64-bit hardware"
+				},
+				{
+					"answer": "I don't have a regular CPU, it is ARM based."
+				}
+			]
+		},
+		{
+			"question": "Some distros might need more resources to run well. Please select the option which describes your system.",
+			"type": "single",
+			"answers": [
+				{
+					"answer": "I have outdated/bad hardware that can't/barely runs Windows with frequent crashes."
+				},
+				{
+					"answer": "I have old hardware that runs Windows slowly."
+				},
+				{
+					"answer": "I have fairly new hardware that runs Windows and most software well, without frequent issues."
+				},
+				{
+					"answer": "I have great hardware that runs Windows and most software well, and that might even run resource instensive programs.",
+					"tooltip": "In this case, a resource instensive program is for example Photoshop, Premier Pro, DaVinci Resolve and such."
+				},
+				{
+					"answer": "I have cutting edge hardware that runs Windows and all software well, even resource instensive programs without any issues."
+				}
+			]
+		},
+		{
+			"question": "Some distros have less, some have more users. This affects getting support in certain issues that you might encounter. Please select the tier of community you want your distro to have.",
+			"type": "rangeSteps",
+			"answers": [
+				{
+					"answer": "Little to no userbase"
+				},
+				{
+					"answer": "Small userbase"
+				},
+				{
+					"answer": "Medium userbase"
+				},
+				{
+					"answer": "Great userbase"
+				}
+			]
+		},
+		{
+			"question": "Most distros are 100% free as of price, however some distros do require payment. Please select the one you would like to go with.",
+			"type": "single",
+			"answers": [
+				{
+					"answer": "I want my distro to be free"
+				},
+				{
+					"answer": "I am fine with paying a fee"
+				}
+			]
+		},
+		{
+			"question": "Some distros do come with default applications. Please select if you would like default apps or you want to install most by yourself.",
+			"type": "single",
+			"answers": [
+				{
+					"answer": "I am fine with default applications"
+				},
+				{
+					"answer": "I don't want them",
+					"tooltip": "You will still get the really basic apps like settings ans such."
+				}
+			]
+		},
+		{
+			"question": "Please select the way you want to install applications for your distro.",
+			"type": "single",
+			"answers": [
+				{
+					"answer": "I want to install my programs with a kind of \"App Store\""
+				},
+				{
+					"answer": "I am fine with using terminal to install applications"
+				}
+			]
+		},
+		{
+			"question": "Some distros have more, little updates with less bigger features, some have less updates but with more and bigger features. Please select the one you prefer.",
+			"type": "single",
+			"answers": [
+				{
+					"answer": "I would like more, little updates"
+				},
+				{
+					"answer": "I would like grand updates"
+				}
+			]
+		}
+	]
+}
