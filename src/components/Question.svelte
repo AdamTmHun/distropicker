@@ -2,6 +2,18 @@
 	export let id: number;
 
 	import quiz from '../routes/quiz/quiz.json';
+	import { answers as answerStore } from "../stores/answers"
+	let a = [false, false, false, false, false, false]
+	$: {
+		$answerStore.daily = +a[0]
+		$answerStore.gaming = +a[1]
+		$answerStore.anonimity = +a[2]
+		$answerStore.server = +a[3]
+		$answerStore.isolating = +a[4]
+		$answerStore.liveMode = +a[5]
+	}
+	let ch = false;
+	$: console.log($answerStore)
 </script>
 
 <div class="lg:flex lg:justify-center inline-block">
@@ -13,16 +25,16 @@
 			<span class="italic text-center text-2xs md:text-sm lg:text-lg mt-[4px]"
 				>You can select multiple answers</span
 			>
-			{#each quiz.main[id - 1].answers as answer}
+			{#each quiz.main[id - 1].answers as answer, i}
 				<div class="label justify-start my-[-0.5rem]">
 					<div class="form-control mx-[1rem]">
 						<label class="label cursor-pointer justify-start">
-							<input type="checkbox" class="checkbox checkbox-primary" />
+							<input type="checkbox" class="checkbox checkbox-primary" bind:checked={a[i]} />
 							<span class="label-text text-left ml-[1rem] lg:text-lg">{answer.answer}</span>
 						</label>
 					</div>
 					{#if answer.tooltip}
-						<div class="tooltip tooltip-left lg:!tooltip" data-tip={answer.tooltip}>
+						<div class="tooltip " data-tip={answer.tooltip}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"

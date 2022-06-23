@@ -4,9 +4,8 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { fly } from 'svelte/transition';
-	import { quartInOut } from 'svelte/easing';
 	import Steps from '../../components/Steps.svelte';
+	import { Motion } from "svelte-motion"
 
 	import quiz from './quiz.json';
 	import Question from '../../components/Question.svelte';
@@ -23,8 +22,8 @@
 			noscroll: true
 		});
 	};
-	$: mountedClass = 'absolute';
-	$: isMounted = true;
+
+	
 </script>
 
 <div class="hero block min-h-screen bg-base-200 ">
@@ -39,8 +38,11 @@
 				$page.url.searchParams.get('id')
 			)}
 		/>
+		
 		{#key $page.url.searchParams.get('id')}
+		<Motion >
 			<Question id={parseInt($page.url.searchParams.get('id'))} />
+		</Motion>
 		{/key}
 		<div
 			class="fixed bg-base-300 w-[99%] bottom-[0%] h-[4rem] rounded-2xl mb-[0.5rem] ml-[0.5%] flex justify-center shadow-2xl"
