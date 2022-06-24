@@ -5,7 +5,8 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import Steps from '../../components/Steps.svelte';
-	import { Motion } from "svelte-motion"
+	import { fly } from 'svelte/transition';
+	import { expoInOut } from "svelte/easing"
 
 	import quiz from './quiz.json';
 	import Question from '../../components/Question.svelte';
@@ -22,35 +23,33 @@
 			noscroll: true
 		});
 	};
-
+	let shouldBeVisible = true;
+	const handleChange = () => {
+		shouldBeVisible = false;
+		updateId()
+	}
 	
 </script>
 
 <div class="hero block min-h-screen bg-base-200 ">
-	<div class="flex flex-col justify-center">
+	<div class="!overflow-x-hidden flex flex-col justify-center">
 		<div class="text-center font-bold mt-[1rem] text-lg md:text-3xl mb-[-3rem] lg:mb-[0]">
 			<h2>Question {$page.url.searchParams.get('id')}</h2>
 			<span class="font-medium text-sm lg:hidden">out of 15</span>
 		</div>
-		<Steps
-			step={parseInt(
-				// @ts-ignore
-				$page.url.searchParams.get('id')
-			)}
-		/>
-		
-		{#key $page.url.searchParams.get('id')}
-		<Motion >
-			<Question id={parseInt($page.url.searchParams.get('id'))} />
-		</Motion>
-		{/key}
+		<Steps step={parseInt($page.url.searchParams.get('id'))} />
+		{#if shouldBeVisible}
+			<div class="!overflow-x-hidden" in:fly="{{ x: 200, duration: 1000, easing: expoInOut }}" out:fly|local="{{ x: -200, duration: 1000, easing: expoInOut }}" on:outroend="{() => shouldBeVisible = true}">
+				<Question id={parseInt($page.url.searchParams.get('id'))} />
+			</div>
+		{/if}
 		<div
 			class="fixed bg-base-300 w-[99%] bottom-[0%] h-[4rem] rounded-2xl mb-[0.5rem] ml-[0.5%] flex justify-center shadow-2xl"
 		>
 			<div class="text-center relative ">
 				<button
 					on:click={() => {
-						updateId();
+						handleChange();
 					}}
 					class="btn btn-primary mt-2">Next</button
 				>
@@ -65,8 +64,6 @@
 		</div>
 		<div
 			class=" bg-transparent w-[99%] bottom-[0%] h-[4rem] rounded-2xl mb-[0.5rem] ml-[0.5%] flex justify-center"
-		>
-			
-		</div>
+		/>
 	</div>
 </div>
