@@ -67,9 +67,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `AdamTmHun`, `distropicker`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `DistroPicker`, `project_description`
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+This project is based on, but not a fork of [DistroChooser](https://distrochooser.de/). Our aim is to provide better, more personalized results using the power of AI.
 
 
 
