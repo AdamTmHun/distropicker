@@ -23,6 +23,25 @@ module.exports = {
 
 					error: '#b91c1c'
 				}
+				/*mytheme: {
+					primary: '#ff4633',
+
+					secondary: '#9e2a1e',
+
+					accent: '#016d0a',
+
+					neutral: '#1c1917',
+
+					'base-100': '#1D21A8',
+
+					info: '#1d4ed8',
+
+					success: '#166534',
+
+					warning: '#facc15',
+
+					error: '#b91c1c'
+				}*/
 			}
 		]
 	},
@@ -34,6 +53,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [require('daisyui'), require("tailwind-scrollbar")],
-	
+	plugins: [require('daisyui'), require('tailwind-scrollbar')]
 };

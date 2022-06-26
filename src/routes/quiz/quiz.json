@@ -1,18 +1,18 @@
 {
 	"main": [
 		{
-			"question": "There are distros for special usecases. Please select what you are going to use your system for.",
+			"question": "There are distros for special use cases. Please select what you are going to use your system for.",
 			"type": "multiple",
 			"answers": [
 				{
 					"answer": "I want a distro for daily usage"
 				},
 				{
-					"answer": "I want a distro that is widely accepted with game publishers and stores",
+					"answer": "I want a distro that is widely accepted by game publishers and stores",
 					"tooltip": "If a distro wasn't made for gaming or it is not supported by game publishers, that doesn't mean that it won't run games."
 				},
 				{
-					"answer": "I want a distro for anonimity"
+					"answer": "I want a distro for anonymity"
 				},
 				{
 					"answer": "I want a distro for a server"
@@ -42,7 +42,7 @@
 					"answer": "I am familiar with the terminal of other OSes, but not with Linux"
 				},
 				{
-					"answer": "I am familiar with Linux and it's terminal and shell, and using tools should not be a problem"
+					"answer": "I am familiar with Linux and its terminal and shell, and using tools should not be a problem"
 				}
 			]
 		},
@@ -54,22 +54,28 @@
 					"answer": "I want to customize little to no settings, I would like my OS as is."
 				},
 				{
+					"answer": "I want to customize some settings, but I'm no expert.",
+					"tooltip": "Please note that the options you can customize vary between distros."
+				},
+				{
 					"answer": "I want to customize every inch of my system, even if this means that I have to use the terminal, not a GUI for installing"
 				}
 			]
 		},
 		{
-			"question": "Your system might have a 32-bit architecture. If your system has over 4 GB of ram, it has 64-bit architecture. Please select the one you are looking for.",
+			"question": "Your system might have a 32-bit architecture. If your system has over 4 GB of ram, it has a 64-bit architecture. Please select the one you are looking for.",
 			"type": "single",
 			"answers": [
 				{
-					"answer": "I have 32-bit hardware"
+					"answer": "I have 32-bit hardware",
+					"tooltip": "We recommend you choose this option if you are unsure about your architecture. However, installing this on 64-bit hardware will significantly limit the possibilities of it, and it will potentially be a pain reinstalling your system."
 				},
 				{
 					"answer": "I have 64-bit hardware"
 				},
 				{
-					"answer": "I don't have a regular CPU, it is ARM based."
+					"answer": "I don't have a regular CPU, it is ARM-based.",
+					"tooltip": "Please be sure whether it is an x86 (Intel or AMD) or an ARM CPU."
 				}
 			]
 		},
@@ -87,16 +93,16 @@
 					"answer": "I have fairly new hardware that runs Windows and most software well, without frequent issues."
 				},
 				{
-					"answer": "I have great hardware that runs Windows and most software well, and that might even run resource instensive programs.",
-					"tooltip": "In this case, a resource instensive program is for example Photoshop, Premier Pro, DaVinci Resolve and such."
+					"answer": "I have great hardware that runs Windows and most software well, and that might even run resource-intensive programs.",
+					"tooltip": "In this case, a resource-intensive program is for example Photoshop, Premier Pro, DaVinci Resolve and such."
 				},
 				{
-					"answer": "I have cutting edge hardware that runs Windows and all software well, even resource instensive programs without any issues."
+					"answer": "I have cutting-edge hardware that runs Windows and all software well, even resource-intensive programs without any issues."
 				}
 			]
 		},
 		{
-			"question": "Some distros have less, some have more users. This affects getting support in certain issues that you might encounter. Please select the tier of community you want your distro to have.",
+			"question": "Some distros have less, some have more users. This affects getting support for certain issues that you might encounter. Please select the tier of community you want your distro to have.",
 			"type": "rangeSteps",
 			"answers": [
 				{
@@ -114,7 +120,7 @@
 			]
 		},
 		{
-			"question": "Most distros are 100% free as of price, however some distros do require payment. Please select the one you would like to go with.",
+			"question": "Most distros are 100% free as of price, however, some distros do require payment. Please select the one you would like to go with.",
 			"type": "single",
 			"answers": [
 				{
@@ -134,7 +140,7 @@
 				},
 				{
 					"answer": "I don't want them",
-					"tooltip": "You will still get the really basic apps like settings ans such."
+					"tooltip": "You will still get the really basic apps like settings and such."
 				}
 			]
 		},
@@ -146,12 +152,12 @@
 					"answer": "I want to install my programs with a kind of \"App Store\""
 				},
 				{
-					"answer": "I am fine with using terminal to install applications"
+					"answer": "I am fine with using the terminal to install applications"
 				}
 			]
 		},
 		{
-			"question": "Some distros have more, little updates with less bigger features, some have less updates but with more and bigger features. Please select the one you prefer.",
+			"question": "Some distros have more, little updates with less big features, some have fewer updates but with more and bigger features. Please select the one you prefer.",
 			"type": "single",
 			"answers": [
 				{
