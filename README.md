@@ -115,10 +115,7 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+Soon
 
 See the [open issues](https://github.com/AdamTmHun/distropciker/issues) for a full list of proposed features (and known issues).
 
