@@ -115,7 +115,14 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-Soon
+- [x] Quiz layout and backend
+- [ ] AI
+    - [ ] Enough training data
+    - [ ] Filter training data
+- [ ] Proper animations and page transitions
+- [ ] Detailed Download tutorial for most distros listed
+- [ ] Get a logo
+- [ ] Get a domain
 
 See the [open issues](https://github.com/AdamTmHun/distropciker/issues) for a full list of proposed features (and known issues).
 
@@ -145,6 +152,13 @@ Don't forget to give the project a star! Thanks again!
 ## License
 
 Distributed under the Creative Commons License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+## Acknowledgments
+
+* [othneildrew's README Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
