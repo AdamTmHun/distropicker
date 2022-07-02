@@ -3,17 +3,26 @@
 
 	import quiz from '../routes/quiz/quiz.json';
 	import { answers as answerStore } from "../stores/answers"
-	let a = [false, false, false, false, false, false]
+	let rangeValue = 25;
+	let index = 0;
+	let a = [[false, false, false, false, false, false], [false, false, false, false], [false, false, false], [false, false, false], [false, false, false, false, false], [false, false, false, false], [false, false], [false, false], [false, false], [false, false]]
 	$: {
-		$answerStore.daily = +a[0]
-		$answerStore.gaming = +a[1]
-		$answerStore.anonimity = +a[2]
-		$answerStore.server = +a[3]
-		$answerStore.isolating = +a[4]
-		$answerStore.liveMode = +a[5]
+		$answerStore.installation.daily = +a[0][0]						
+		$answerStore.installation.gaming = +a[0][1]
+		$answerStore.installation.anonimity = +a[0][2]
+		$answerStore.installation.server = +a[0][3]
+		$answerStore.installation.isolating = +a[0][4]
+		$answerStore.installation.liveMode = +a[0][5]
 	}
-	let ch = false;
+	const handleClick = () => {
+		if (a[id - 1][index])
+			return a[id - 1][index] = false;
+
+		
+		
+	}
 	$: console.log($answerStore)
+	$: console.log(a)
 </script>
 
 <div class="lg:flex lg:justify-center inline-block">
@@ -29,7 +38,7 @@
 				<div class="label justify-start my-[-0.5rem]">
 					<div class="form-control mx-[1rem]">
 						<label class="label cursor-pointer justify-start">
-							<input type="checkbox" class="checkbox checkbox-primary" bind:checked={a[i]} />
+							<input type="checkbox" class="checkbox checkbox-primary" bind:checked={a[id - 1][i]} />
 							<span class="label-text text-left ml-[1rem] lg:text-lg">{answer.answer}</span>
 						</label>
 					</div>
@@ -55,11 +64,12 @@
 			<span class="italic text-center text-2xs md:text-sm lg:text-lg mt-[4px]"
 				>Please select only one answer</span
 			>
-			{#each quiz.main[id - 1].answers as answer}
+			{#each quiz.main[id - 1].answers as answer, i}
+				{i = index}
 				<div class="label relative justify-start my-[-0.5rem]">
 					<div class="form-control mx-[1rem]">
 						<label class="label cursor-pointer justify-start">
-							<input type="radio" name="radio-6" class="radio radio-primary" />
+							<input type="checkbox" name="radio-6" class="radio radio-primary" bind:checked={a[id - 1][i]} on:click={handleClick}/>
 							<span class="label-text text-left ml-[1rem] lg:text-lg">{answer.answer}</span>
 						</label>
 					</div>
@@ -87,7 +97,7 @@
 			>
 			<div class="m-[2rem] text-center">
 				
-				<input type="range" min="0" max="75" value="25" class="range" step="25" />
+				<input type="range" min="0" max="75" bind:value="{rangeValue}" class="range" step="25"/>
 				<div class="w-full flex justify-between text-xs px-2 ">
 					{#each quiz.main[id - 1].answers as answer}
 						<span>{answer.answer}</span>
