@@ -205,7 +205,7 @@
 						</label>
 					{:else}
 						<label
-							class="card w-[stretch] bg-base-100 shadow-xl border-{borders[
+							class="card w-[stretch] bg-base-100 shadow-xl border-transparent border-primary border-{borders[
 								quiz.main[id - 1].answers[i].val - 1
 							]} border-2 hover:border-primary duration-500 hover:-translate-y-4 cursor-pointer"
 						>

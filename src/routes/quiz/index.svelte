@@ -48,7 +48,7 @@
 			</div>
 		{/if}
 		<div
-			class="fixed bg-base-300 w-[99%] bottom-[0%] h-[4rem] rounded-2xl mb-[0.5rem] ml-[0.5%] flex justify-center shadow-2xl"
+			class="fixed bg-base-300 w-[99%] bottom-[0%] h-[4rem] rounded-2xl mb-[0.5rem] ml-[0.5%] flex justify-center shadow-2xl z-50"
 		>
 			<div class="text-center relative ">
 				<button
