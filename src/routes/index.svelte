@@ -1,3 +1,5 @@
+<title>DistroPicker</title>
+
 <div class="hero min-h-screen bg-base-200 overflow-x-hidden">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <img class="max-w-sm rounded-lg lg:scale-[1.8] ml-48 hidden xl:flex" src="/svg/drawing/programming.svg" alt="programming" />

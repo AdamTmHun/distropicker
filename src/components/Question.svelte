@@ -1,10 +1,8 @@
 <script lang="ts">
 	export let id: number;
 	import wait from 'wait';
-	import { quintIn } from 'svelte/easing';
 	import quiz from '../routes/quiz/quiz.json';
-	import { answers, answers as answerStore } from '../stores/answers';
-	import { each, handle_promise } from 'svelte/internal';
+	import { answers as answerStore } from '../stores/answers';
 	let rangeValue = 25;
 	let index = 0;
 	let val = 0;
@@ -54,7 +52,7 @@
 	};
 	$: console.log($answerStore);
 	$: console.log(a);
-	$: console.log(val);
+	$: console.log(borders);
 </script>
 
 <div class="flex justify-center">

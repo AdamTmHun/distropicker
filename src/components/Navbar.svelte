@@ -11,7 +11,7 @@
       <li><a href="/about">About</a></li>
       </ul>
     </div>
-    <a class="btn btn-ghost normal-case text-xl" href="/">DistroPicker</a>
+    <a class="btn btn-ghost normal-case text-xl gap-2" href="/"><img src="/img/logo/distropicker.png" class="h-6 w-6" alt="distropicker" />DistroPicker</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal p-0">

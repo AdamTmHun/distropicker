@@ -31,6 +31,10 @@
 	
 </script>
 
+
+
+<title>Q{parseInt($page.url.searchParams.get('id'))} | DistroPicker</title>
+
 <div class="hero block min-h-screen bg-base-200 ">
 	<div class="!overflow-x-hidden flex flex-col justify-center">
 		<div class="text-center font-bold mt-[1rem] text-lg md:text-3xl mb-[-3rem] lg:mb-[0]">
