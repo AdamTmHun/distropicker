@@ -39,7 +39,7 @@
 		</div>
 		<Steps step={parseInt($page.url.searchParams.get('id'))} />
 		{#if shouldBeVisible}
-			<div class="!overflow-x-hidden" in:fly="{{ x: 200, duration: 1000, easing: expoInOut }}" out:fly|local="{{ x: -200, duration: 1000, easing: expoInOut }}" on:outroend="{() => shouldBeVisible = true}">
+			<div class="!overflow-x-hidden w-[min]" in:fly="{{ x: 200, duration: 1000, easing: expoInOut }}" out:fly|local="{{ x: -200, duration: 1000, easing: expoInOut }}" on:outroend="{() => shouldBeVisible = true}">
 				<Question id={parseInt($page.url.searchParams.get('id'))} />
 			</div>
 		{/if}

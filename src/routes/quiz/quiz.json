@@ -1,6 +1,71 @@
 {
 	"main": [
 		{
+			"question": "Choose the approximate age of your hardware",
+			"type": "rangeSteps",
+			"answers": [
+				{
+					"answer": "I have old hardware (most likely from before 2003)"
+				},
+				{
+					"answer": "I have semi-new hardware"
+				},
+				{
+					"answer": "I just bought my PC yesterday"
+				}
+				
+			]
+		},
+		{
+			"question": "Which brand of CPUs do you have?",
+			"type": "card",
+			"answers": [
+				{
+					"answer": "AMD",
+					"img": "/svg/cpu/amd-white.svg",
+					"val": 1
+				},
+				{
+					"answer": "Intel",
+					"img": "/svg/cpu/intel-white.svg",
+					"val": 2
+				},
+				{
+					"answer": "Arm",
+					"img": "/svg/cpu/arm-white.svg",
+					"val": 3
+				},
+				{
+					"answer": "I don't know",
+					"img": "/svg/emoji/twemoji-thinking.svg",
+					"val": 4
+				}
+				
+			]
+		},
+		{
+			"question": "Which brand/type of Graphics Cards do you have?",
+			"type": "card",
+			"answers": [
+				{
+					"answer": "NVIDIA",
+					"img": "/svg/gpu/nvidia-white.svg",
+					"val": 1
+				},
+				{
+					"answer": "AMD",
+					"img": "/svg/cpu/amd-white.svg",
+					"val": 2
+				},
+				{
+					"answer": "Integrated",
+					"img": "/svg/cpu/arm-white.svg",
+					"val": 3
+				}
+				
+			]
+		},
+		{
 			"question": "There are distros for special use cases. Please select what you are going to use your system for.",
 			"type": "multiple",
 			"answers": [
@@ -32,17 +97,21 @@
 			"type": "single",
 			"answers": [
 				{
-					"answer": "I have little to no knowledge of Linux and/or the terminal"
+					"answer": "I have little to no knowledge of Linux and/or the terminal",
+					"val": 1
 				},
 				{
 					"answer": "I don't know much about Linux and/or the terminal, but I am not afraid to get to know it",
-					"tooltip": "We suggest choosing this option if you have time and effort to get familiar with it."
+					"tooltip": "We suggest choosing this option if you have time and effort to get familiar with it.",
+					"val": 2
 				},
 				{
-					"answer": "I am familiar with the terminal of other OSes, but not with Linux"
+					"answer": "I am familiar with the terminal of other OSes, but not with Linux",
+					"val": 3
 				},
 				{
-					"answer": "I am familiar with Linux and its terminal and shell, and using tools should not be a problem"
+					"answer": "I am familiar with Linux and its terminal and shell, and using tools should not be a problem",
+					"val": 4
 				}
 			]
 		},
@@ -51,31 +120,17 @@
 			"type": "single",
 			"answers": [
 				{
-					"answer": "I want to customize little to no settings, I would like my OS as is."
+					"answer": "I want to customize little to no settings, I would like my OS as is.",
+					"val": 1
 				},
 				{
 					"answer": "I want to customize some settings, but I'm no expert.",
-					"tooltip": "Please note that the options you can customize vary between distros."
+					"tooltip": "Please note that the options you can customize vary between distros.",
+					"val": 2
 				},
 				{
-					"answer": "I want to customize every inch of my system, even if this means that I have to use the terminal, not a GUI for installing"
-				}
-			]
-		},
-		{
-			"question": "Your system might have a 32-bit architecture. If your system has over 4 GB of ram, it has a 64-bit architecture. Please select the one you are looking for.",
-			"type": "single",
-			"answers": [
-				{
-					"answer": "I have 32-bit hardware",
-					"tooltip": "We recommend you choose this option if you are unsure about your architecture. However, installing this on 64-bit hardware will significantly limit the possibilities of it, and it will potentially be a pain reinstalling your system."
-				},
-				{
-					"answer": "I have 64-bit hardware"
-				},
-				{
-					"answer": "I don't have a regular CPU, it is ARM-based.",
-					"tooltip": "Please be sure whether it is an x86 (Intel or AMD) or an ARM CPU."
+					"answer": "I want to customize every inch of my system, even if this means that I have to use the terminal, not a GUI for installing",
+					"val": 3
 				}
 			]
 		},
@@ -84,20 +139,25 @@
 			"type": "single",
 			"answers": [
 				{
-					"answer": "I have outdated/bad hardware that can't/barely runs Windows with frequent crashes."
+					"answer": "I have outdated/bad hardware that can't/barely runs Windows with frequent crashes.",
+					"val": 1
 				},
 				{
-					"answer": "I have old hardware that runs Windows slowly."
+					"answer": "I have old hardware that runs Windows slowly.",
+					"val": 2
 				},
 				{
-					"answer": "I have fairly new hardware that runs Windows and most software well, without frequent issues."
+					"answer": "I have fairly new hardware that runs Windows and most software well, without frequent issues.",
+					"val": 3
 				},
 				{
 					"answer": "I have great hardware that runs Windows and most software well, and that might even run resource-intensive programs.",
-					"tooltip": "In this case, a resource-intensive program is for example Photoshop, Premier Pro, DaVinci Resolve and such."
+					"tooltip": "In this case, a resource-intensive program is for example Photoshop, Premier Pro, DaVinci Resolve and such.",
+					"val": 4
 				},
 				{
-					"answer": "I have cutting-edge hardware that runs Windows and all software well, even resource-intensive programs without any issues."
+					"answer": "I have cutting-edge hardware that runs Windows and all software well, even resource-intensive programs without any issues.",
+					"val": 5
 				}
 			]
 		},
@@ -124,10 +184,12 @@
 			"type": "single",
 			"answers": [
 				{
-					"answer": "I want my distro to be free"
+					"answer": "I want my distro to be free",
+					"val": 1
 				},
 				{
-					"answer": "I am fine with paying a fee"
+					"answer": "I am fine with paying a fee",
+					"val": 2
 				}
 			]
 		},
@@ -136,11 +198,13 @@
 			"type": "single",
 			"answers": [
 				{
-					"answer": "I am fine with default applications"
+					"answer": "I am fine with default applications",
+					"val": 1
 				},
 				{
 					"answer": "I don't want them",
-					"tooltip": "You will still get the really basic apps like settings and such."
+					"tooltip": "You will still get the really basic apps like settings and such.",
+					"val": 2
 				}
 			]
 		},
@@ -149,10 +213,12 @@
 			"type": "single",
 			"answers": [
 				{
-					"answer": "I want to install my programs with a kind of \"App Store\""
+					"answer": "I want to install my programs with a kind of \"App Store\"",
+					"val": 1
 				},
 				{
-					"answer": "I am fine with using the terminal to install applications"
+					"answer": "I am fine with using the terminal to install applications",
+					"val": 2
 				}
 			]
 		},
@@ -161,10 +227,12 @@
 			"type": "single",
 			"answers": [
 				{
-					"answer": "I would like more, little updates"
+					"answer": "I would like more, little updates",
+					"val": 1
 				},
 				{
-					"answer": "I would like grand updates"
+					"answer": "I would like grand updates",
+					"val": 2
 				}
 			]
 		}
